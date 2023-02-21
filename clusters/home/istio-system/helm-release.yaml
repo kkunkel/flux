@@ -22,7 +22,7 @@ metadata:
   namespace: istio-system
 spec:
   dependsOn:
-  - istio-base
+  - name: istio-base
   interval: 10m0s
   chart:
     spec:
