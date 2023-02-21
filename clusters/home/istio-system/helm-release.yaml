@@ -47,3 +47,12 @@ spec:
   values:
     autoscaling:
       enabled: true
+  chart:
+    spec:
+      chart: istio-gateway
+      version: '1.17.0'
+      sourceRef:
+        kind: HelmRepository
+        name: istio-gateway
+        namespace: istio-system
+      interval: 10m0s
