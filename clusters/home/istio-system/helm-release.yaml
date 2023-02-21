@@ -54,6 +54,6 @@ spec:
       version: '1.17.0'
       sourceRef:
         kind: HelmRepository
-        name: gateway
+        name: istio
         namespace: istio-system
       interval: 10m0s
