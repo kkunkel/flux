@@ -50,7 +50,7 @@ spec:
       enabled: true
   chart:
     spec:
-      chart: istio-gateway
+      chart: gateway
       version: '1.17.0'
       sourceRef:
         kind: HelmRepository
