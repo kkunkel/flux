@@ -13,4 +13,4 @@ spec:
         kind: HelmRepository
         name: metallb
         namespace: metallb-system
-      interval: 1m
+      interval: 10m0s
