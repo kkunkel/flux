@@ -1,0 +1,26 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: kubernetes-dashboard
+spec:
+  selector:
+    istio: gateway # use Istio default gateway implementation
+  servers:
+    - port:
+        number: 80
+        name: http
+        protocol: HTTP
+      hosts:
+        - dashboard.local
+        - dashboard.home.arpa
+        - dashboard.kunkel.dev
+    - port:
+        number: 443
+        name: https
+        protocol: HTTP
+      hosts:
+        - dashboard.local
+        - dashboard.home.arpa
+        - dashboard.kunkel.dev
+      tls:
+        mode: PASSTHROUGH

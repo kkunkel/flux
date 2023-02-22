@@ -1,0 +1,15 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: kubernetes-dashboard
+spec:
+  hosts:
+    - dashboard.local
+    - dashboard.home.arpa
+    - dashboard.kunkel.dev
+  gateways:
+    - kubernetes-dashboard
+  http:
+    - route:
+        - destination:
+            host: kubernetes-dashboard.kubernetes-dashboard.svc.cluster.local
